@@ -487,8 +487,19 @@
         styleMode == 1
           ? "client_dark_mode_style_cookie"
           : "client_light_mode_style_cookie";
-
-      $("body").addClass("active-light-mode");
+      if (Cookies.get(cookieKey) == "dark") {
+        $("body").removeClass("active-light-mode");
+        $("body").addClass("active-dark-mode");
+      } else if (Cookies.get(cookieKey) == "light") {
+        $("body").removeClass("active-dark-mode");
+        $("body").addClass("active-light-mode");
+      } else {
+        if (styleMode == 1) {
+          $("body").addClass("active-dark-mode");
+        } else {
+          $("body").addClass("active-light-mode");
+        }
+      }
     },
   };
   doobJs.i();
