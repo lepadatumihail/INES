@@ -28,8 +28,8 @@ if ($name == "") {
     $msg['field'] = "contact-message";
     $msg['code'] = FALSE;
 } else {
-    $to = 'nipabali@gmail.com';
-    $subject = 'Doob Contact Query';
+    $to = 'lepadatu.mihail1@gmail.com';
+    $subject = 'Application form' . $name;
     $_message = '<html><head></head><body>';
     $_message .= '<p>Name: ' . $name . '</p>';
     $_message .= '<p>Message: ' . $phone . '</p>';
@@ -39,10 +39,10 @@ if ($name == "") {
 
     $headers = 'MIME-Version: 1.0' . "\r\n";
     $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-    $headers .= 'From:  Doob <nipabali@gmail.com>' . "\r\n";
-    $headers .= 'cc: nipabali@gmail.com' . "\r\n";
-    $headers .= 'bcc: nipabali@gmail.com' . "\r\n";
-    mail($to, $subject, $_message, $headers, '-f nipabali@gmail.com');
+    $headers .= 'From:   <lepadatu.mihail1@gmail.com>' . "\r\n";
+    $headers .= 'cc: lepadatu.mihail1@gmail.com' . "\r\n";
+    $headers .= 'bcc: lepadatu.mihail1@gmail.com' . "\r\n";
+    mail($to, $subject, $_message, $headers, '-f lepadatu.mihail1@gmail.com');
 
     $msg['success'] = "\n Email has been sent successfully.";
     $msg['code'] = TRUE;
