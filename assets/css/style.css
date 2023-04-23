@@ -13226,10 +13226,7 @@ Timeline Area
 }
 .brand-style-1 li {
   flex-basis: 25%;
-  border-width: 1px 1px 1px 1px;
-  border-style: solid;
   margin: 0px 0px -2px -2px;
-  border-color: var(--color-border);
   padding: 40px 0 40px 0;
   text-align: center;
 }
@@ -16484,7 +16481,6 @@ body.active-light-mode .single-demo {
 
 body.active-light-mode .rainbow-accordion-style .card .card-body,
 body.active-light-mode .brand-style-1 li {
-  border-color: #d8d8d8;
 }
 
 body.active-light-mode hr {
