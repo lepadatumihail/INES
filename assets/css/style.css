@@ -9113,7 +9113,7 @@ xclip
   align-items: center;
 }
 .header-default .logo a img {
-  max-height: 85px;
+  max-height: 70px;
 }
 .header-default .header-right {
   display: flex;
@@ -9753,7 +9753,7 @@ xclip
   padding: 15px 20px;
 }
 .popup-mobile-menu .inner .header-top .logo a img {
-  max-height: 85px;
+  max-height: 70px;
 }
 .popup-mobile-menu .inner .header-top .close-menu .close-button {
   background: var(--color-darker);
@@ -12258,7 +12258,7 @@ Timeline Area
     Call To Action Style  
 --------------------------------*/
 .clltoaction-style-default {
-  padding: 250px 0;
+  padding: 150px 0;
 }
 .clltoaction-style-default .title {
   font-size: 52px;
@@ -16682,7 +16682,7 @@ body.active-light-mode .testimonial-style-two .content::after {
 }
 
 body.active-light-mode .header-transparent .mainmenu-nav .mainmenu > li > a {
-  color: var(--color-body);
+  color: black;
 }
 
 body.active-light-mode

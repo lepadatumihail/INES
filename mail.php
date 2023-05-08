@@ -1,8 +1,13 @@
 <?php
+$msg = array();
 $name = trim($_POST['contact-name']);
 $phone = trim($_POST['contact-phone']);
 $email = trim($_POST['contact-email']);
+$subject = trim($_POST['subject']);
+$organization = trim($_POST['organisation']);
+$mainInterest = trim($_POST['mainInterest']);
 $message = trim($_POST['contact-message']);
+
 if ($name == "") {
     $msg['err'] = "\n Name can not be empty!";
     $msg['field'] = "contact-name";
@@ -25,22 +30,26 @@ if ($name == "") {
     $msg['code'] = FALSE;
 }  else {
     $to = 'lepadatu.mihail1@gmail.com';
-    $subject = 'Application form' . $name;
+    $subject = 'Application form: ' . $subject;
     $_message = '<html><head></head><body>';
     $_message .= '<p>Name: ' . $name . '</p>';
-    $_message .= '<p>Message: ' . $phone . '</p>';
+    $_message .= '<p>Phone number: ' . $phone . '</p>';
     $_message .= '<p>Email: ' . $email . '</p>';
+    $_message .= '<p>Subject: ' . $subject . '</p>';
+    $_message .= '<p>Organization: ' . $organization . '</p>';
+    $_message .= '<p>Main Interest: ' . $mainInterest . '</p>';
     $_message .= '<p>Message: ' . $message . '</p>';
     $_message .= '</body></html>';
 
     $headers = 'MIME-Version: 1.0' . "\r\n";
     $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-    $headers .= 'From:   <lepadatu.mihail1@gmail.com>' . "\r\n";
-    $headers .= 'cc: lepadatu.mihail1@gmail.com' . "\r\n";
-    $headers .= 'bcc: lepadatu.mihail1@gmail.com' . "\r\n";
+    $headers .= 'From: <lepadatu.mihail1@gmail.com>' . "\r\n";
+    $headers .= 'Cc: lepadatu.mihail1@gmail.com' . "\r\n";
+    $headers .= 'Bcc: lepadatu.mihail1@gmail.com' . "\r\n";
     mail($to, $subject, $_message, $headers, '-f lepadatu.mihail1@gmail.com');
 
     $msg['success'] = "\n Email has been sent successfully.";
     $msg['code'] = TRUE;
 }
 echo json_encode($msg);
+?>
