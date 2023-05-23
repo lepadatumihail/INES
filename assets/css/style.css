@@ -7976,7 +7976,7 @@ textarea:-ms-input-placeholder {
 }
 .list-icon li {
   display: flex;
-  align-items: center;
+  align-items: start;
   margin: 15px 0;
 }
 @media only screen and (max-width: 767px) {
