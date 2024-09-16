@@ -35,7 +35,7 @@
       doobJs.darkLight();
     },
 
-    menuCurrentLink: function () {
+     menuCurrentLink: function () {
       var currentPage = location.pathname.split("/"),
         current = currentPage[currentPage.length - 1];
       $(".mainmenu li a").each(function () {
